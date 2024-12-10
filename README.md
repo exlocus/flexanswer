@@ -43,7 +43,7 @@
 
 ## 📄 Лицензия
 
-Этот проект распространяется под лицензией [MIT](https://opensource.org/licenses/MIT).
+Этот проект распространяется под лицензией [FlexAnswer License](https://raw.githubusercontent.com/exlocus/flexanswer/refs/heads/main/licanse.txt).
 
 ---
 
