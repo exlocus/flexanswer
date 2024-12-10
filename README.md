@@ -1,6 +1,6 @@
 # FlexAnswer - Расширение для браузера, которое интегрирует ИИ в ваш браузер.
 
-![FlexAnswer Logo](https://github.com/exlocus/project-yaanai/blob/main/YaanAI-README-Images/logo.png)
+![FlexAnswer Logo](https://raw.githubusercontent.com/exlocus/flexanswer/refs/heads/main/readme-imgs/logo-with-text.png)
 
 **FlexAnswer** — это расширение для браузера, которое интегрирует ИИ в ваш браузер. Оно добавляет окно в правый нижний угол для общения с ИИ, позволяя отправлять задания для анализа и получения помощи в их решении.
 
