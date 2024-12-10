@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <link rel="stylesheet" type="text/css" href="./css/notification_popup.css" />
+</head>
+<body class="flex-column">
+    <div class="app app">
+        <div class="notification_popup" style="z-index: 1; display: none;">
+            <div class="blur"></div>
+            <div class="notification_popup_plate">
+              <div class="notification_popup_plate_content">
+                <div class="notification_popup_plate_content_description_and_title">
+                  <div class="notification_popup_plate_content_title_plate">
+                    <div class="notification_popup_plate_content_title_plate_title">
+                      <img class="notification_popup_plate_content_title_plate_title_icon" src="./assets/title_icon.svg" alt="alt text" />
+                      <div class="notification_popup_plate_content_title_plate_title_text">Доступно обновление v0.2.0</div>
+                    </div>
+                  </div>
+                  <div class="notification_popup_plate_content_description_plate">Доступно новое обновление! Версия {version}. Установите сейчас, чтобы получить новые функции и улучшения!</div>
+                </div>
+                <div class="notification_popup_plate_content_buttons">
+                  <button id="github_btn" class="notification_popup_plate_content_buttons_github_button" onclick="openGithub()">
+                    Гитхаб
+                  </button>
+                  <button class="update_notification_popup_plate_content_buttons_okey_button">
+                    Окей
+                  </button>
+                  <button class="notification_popup_plate_content_buttons_okey_button">
+                    Окей
+                  </button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="header">
+            <div class="background_animation">
+                <img class="background_animation_element_1" src="./assets/background_animation_element_1.svg" alt="alt text" />
+                <img class="background_animation_element_2" src="./assets/background_animation_element_2.svg" alt="alt text" />
+                <img class="background_animation_element_3" src="./assets/background_animation_element_3.svg" alt="alt text" />
+                <img class="background_animation_element_4" src="./assets/background_animation_element_4.svg" alt="alt text" />
+                <img class="background_animation_element_5" src="./assets/background_animation_element_5.svg" alt="alt text" />
+                <img class="background_animation_element_6" src="./assets/background_animation_element_6.svg" alt="alt text" />
+                <img class="background_animation_element_7" src="./assets/background_animation_element_7.svg" alt="alt text" />
+                <img class="background_animation_element_8" src="./assets/background_animation_element_8.svg" alt="alt text" />
+            </div>
+            <div class="logo_and_version_info">
+                <img class="logo" src="./assets/logo.png" alt="alt text" />
+                <div class="version_info">v1.0.0b | enhanced | exLocus</div>
+            </div>
+        </div>
+        <div class="server_status_plate">
+            <div class="server_status">
+                <div class="status_icon">
+                    <div class="color1"></div>
+                    <div class="color2"></div>
+                </div>
+                <div class="status_text">Сервер запущен!</div>
+            </div>
+        </div>
+        <div class="info_plate">
+            <p class="info_text">
+                FlexAnswer by exLocus. В дизайне используются элементы компании Xiaomi, включая шрифт MiSans, а также цвета, схожие с HyperOS 2.
+                <br />
+                <br />
+          ВНИМАНИЕ! FlexAnswer находится на стадии тестирования, поэтому возможны ошибки и баги.
+            </p>
+        </div>
+        <button class="github_btn" onclick="openGithub()">
+            <div class="flex_row">
+                <img class="image1" src="./assets/github_icon.svg" alt="alt text" />
+                <div class="info">Гитхаб</div>
+            </div>
+        </button>        
+    </div>
+    <script src="./js/notification.js"></script>
+    <script>
+      function openGithub() {
+        // Вызов метода API из Python
+        if (window.pywebview && window.pywebview.api) {
+          window.pywebview.api.open_github();
+        } else {
+          console.error("pywebview API не доступен");
+        }
+      }
+    </script>
+</body>
+</html>

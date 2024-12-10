@@ -1,0 +1,4 @@
+g4f
+pywebview
+flask
+flask_cors
