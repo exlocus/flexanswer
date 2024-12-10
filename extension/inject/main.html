@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" type="text/css" href="./css/animations.css" />
+    <link rel="stylesheet" type="text/css" href="./css/section_chat.css" />
+    <link rel="stylesheet" type="text/css" href="./css/section_settings.css" />
+    <link rel="stylesheet" type="text/css" href="./css/notification_popup.css" />
+</head>
+<body class="flex-column">
+    <main class="extension-flex-answer main">
+        <section class="header">
+            <img class="logo" src="./assets/logo.png" alt="alt text" />
+            <div class="server_status">
+                <span class="server_status_text">Сервер офлайн</span>
+                <div class="server_status_icon offline">
+                    <div class="color1"></div>
+                    <div class="color2"></div>
+                </div>
+            </div>
+        </section>
+        <div class="notification_popup" style="z-index: 1; display: none;">
+            <div class="blur"></div>
+            <div class="notification_popup_plate">
+              <div class="notification_popup_plate_content">
+                <div class="notification_popup_plate_content_description_and_title">
+                  <div class="notification_popup_plate_content_title_plate">
+                    <div class="notification_popup_plate_content_title_plate_title">
+                      <img class="notification_popup_plate_content_title_plate_title_icon" src="./assets/title_icon.svg" alt="alt text" />
+                      <div class="notification_popup_plate_content_title_plate_title_text">Доступно обновление v0.2.0</div>
+                    </div>
+                  </div>
+                  <div class="notification_popup_plate_content_description_plate">Доступно новое обновление! Версия {version}. Установите сейчас, чтобы получить новые функции и улучшения!</div>
+                </div>
+                <div class="notification_popup_plate_content_buttons">
+                  <button id="github_btn" class="notification_popup_plate_content_buttons_github_button">
+                    Гитхаб
+                  </button>
+                  <button class="update_notification_popup_plate_content_buttons_okey_button">
+                    Окей
+                  </button>
+                  <button class="notification_popup_plate_content_buttons_okey_button">
+                    Окей
+                  </button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <section class="section section-chat">
+            <input class="element message_input" type="text" placeholder="Введите сообщение..." />
+            <button class="element send_btn">
+                <img class="send_icon" src="./assets/send_icon.svg" alt="alt text" />
+            </button>
+            <button class="element attach_btn">
+                <img class="attach_icon" src="./assets/attach_icon.svg" alt="alt text" />
+            </button>
+            <div class="element messages">
+                <div class="messages_container">                      
+                </div>
+            </div>
+            <dialog class="element attach_file_window" style="display: none;">
+                <span class="not_done_text">Not done, lol =)</span>
+            </dialog>
+            <div class="shadow"></div>
+            <button class="element settings_btn">
+                <img class="settings_icon" src="./assets/settings_icon.svg" alt="alt text" />
+            </button>
+        </section>
+        <section class="section section-settings" style="display: none;">
+            <button class="element back_btn">
+                <div class="back_btn_text">Назад</div>
+            </button>
+            <button class="element reset_to_default_btn">
+                <div class="reset_to_default_btn_text">Сброс настроек</div>
+            </button>
+            <div class="element setting_ip_select">
+                <div class="setting_name">Выбрать ip:</div>
+                <p class="setting_description">Позволяет указать адрес сервера, на котором запущена серверная часть FlexAnswer. Вы можете установить сервер на удалённой машине, чтобы не запускать его локально. По умолчанию адрес localhost:5000.</p>
+                <input type="text" class="tumbler input input_ip" value="localhost:5000" />
+            </div>
+            <div class="element setting_module_select">
+                <div class="setting_name">Модель AI:</div>
+                <p class="setting_description">Позволяет выбрать конкретную модель нейросети, которую будет использовать программа для обработки запросов, такие как ChatGPT-4, YaGPT, Gemini и другие доступные в системе.</p>
+                <select class="tumbler select select_model">
+                    <option value="gpt_4o">gpt_4o</option>
+                    <option value="gpt_4o_mini">gpt_4o_mini</option>
+                    <option value="gpt_3.5_turbo">gpt_3.5_turbo</option>
+                    <option value="o1_preview">o1_preview</option>
+                    <option value="llama_3.1_405b">llama_3.1_405b</option>
+                </select>
+            </div>
+        </section>        
+    </main>
+    <!-- <script src="./js/main.js"></script> -->
+    <script src="./js/section-switching.js"></script>
+    <script src="./js/message-handling.js"></script>
+    <script src="./js/attach-window.js"></script>
+    <script src="./js/settings-handling.js"></script>
+    <script src="./js/notification.js"></script>
+    <script src="./js/server-status.js"></script>
+</body>
+</html>
