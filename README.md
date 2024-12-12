@@ -1,4 +1,4 @@
-# FlexAnswer - Расширение для браузера, которое интегрирует ИИ в ваш браузер.
+# FlexAnswer - Расширение, которое интегрирует ИИ в ваш браузер.
 
 ![FlexAnswer Logo](https://raw.githubusercontent.com/exlocus/flexanswer/refs/heads/main/readme-imgs/logo-with-text.png)
 
