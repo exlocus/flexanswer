@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const currentVersion = '1.0.0b';
+    const currentVersion = '1.0.1bp';
   
     // Проверяет наличие новой версии.
     async function checkForUpdates() {
