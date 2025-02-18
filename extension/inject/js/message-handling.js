@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const ipInput = document.querySelector('.input_ip'); 
     const modelSelect = document.querySelector('.select_model');
     let autoScrollEnabled = true;
+    let isRequestInProgress = false; // Флаг для отслеживания активного запроса
 
     function checkScrollPosition(messagesContainer) {
         const atBottom =
@@ -101,17 +102,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function handleSendMessage() {
+        // Если запрос уже выполняется, повторная отправка не допускается
+        if (isRequestInProgress) {
+            return;
+        }
         const message = messageInput.value.trim();
         if (message) {
+            isRequestInProgress = true;
             addMessage(message, true);
             const typingIndicator = addTypingIndicator();
 
-            sendToNeuralNetwork(message).then(response => {
-                typingIndicator.remove();
+            sendToNeuralNetwork(message)
+                .then(response => {
+                    typingIndicator.remove();
+                    addMessage(response, false);
+                })
+                .finally(() => {
+                    isRequestInProgress = false;
+                });
 
-                addMessage(response, false);
-            });
-
+            // Очистка поля ввода происходит только при успешной отправке нового запроса
             messageInput.value = '';
         }
     }
