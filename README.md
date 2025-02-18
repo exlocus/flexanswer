@@ -98,7 +98,7 @@
 
 ## 📄 Лицензия
 
-Этот проект распространяется под лицензией [FlexAnswer License](https://raw.githubusercontent.com/exlocus/flexanswer/refs/heads/main/licanse.txt).
+Этот проект распространяется под лицензией [FlexAnswer License](https://raw.githubusercontent.com/exlocus/flexanswer/refs/heads/main/license.txt).
 
 ---
 
