@@ -2,6 +2,8 @@
 
 ![FlexAnswer Logo](https://raw.githubusercontent.com/exlocus/flexanswer/refs/heads/main/readme-imgs/logo-with-text.png)
 
+[**Английская версия / English version**](README.md)
+
 **FlexAnswer** — это расширение для браузера, которое интегрирует ИИ в ваш браузер. Оно добавляет окно в правый нижний угол для общения с ИИ, позволяя отправлять задания для анализа и получения помощи в их решении.
 
 ---
